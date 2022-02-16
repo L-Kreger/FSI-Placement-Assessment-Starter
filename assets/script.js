@@ -1,27 +1,64 @@
-// HINT: You can delete this console.log after you no longer need it!
-console.log('JavaScript code has loaded!')
-// First, tell us your name
-let yourName = "Jane Doe" // HINT: Replace this with your own name!
+// name
+let yourName = "Laurie Kreger"
 
 // We'll use these variables to track the counts of each cookie type
 let gb = 0 // Gingerbread
 let cc = 0 // Chocolate Chip
 let sugar = 0 // Sugar Sprinkle
 
-// selecting the element with an id of credit
 const credit = document.querySelector('#credit')
-// selecting the element with an id of add-gb
+
+// gb
 const gbPlusBtn = document.querySelector('#add-gb')
+const gbMinsBtn = document.querySelector('#minus-gb')
+const gbQty = document.querySelector('#qty-gb')
+
+//cc
+const ccPlusBtn = document.querySelector('#add-cc')
+const ccMinsBtn = document.querySelector('#minus-cc')
+const ccQty = document.querySelector('#qty-cc')
+
+// ss
+const scPlusBtn = document.querySelector('#add-sugar')
+const scMinsBtn = document.querySelector('#minus-sugar')
+const scQty = document.querySelector('#qty-sugar')
+
+// total
+const allTnt = document.querySelector('#qty-total')
+
 
 // Code to update name display
 credit.textContent = `Created by ${yourName}`
 
-// Event listener for clicks on the "+" button for Gingerbread cookies
+// gb
 gbPlusBtn.addEventListener('click', function() {
-// HINT: You can delete this console.log after you no longer need it!
-console.log('Gingerbread + button was clicked!')
-
-// TODO: Write the code to be run when the "+" button for "Gingerbread" is clicked
+    gbQty.textContent -=-1
+    allTnt.textContent -=-1
 })
 
-// TODO: Hook up event listeners for the rest of the buttons
+gbMinsBtn.addEventListener('click', function() {
+    gbQty.textContent -=1
+    allTnt.textContent -=1
+})
+
+// cc
+ccPlusBtn.addEventListener('click', function() {
+    ccQty.textContent -=-1
+    allTnt.textContent -=-1
+})
+
+ccMinsBtn.addEventListener('click', function() {
+    ccQty.textContent -=1
+    allTnt.textContent -=1
+})
+
+// sugar
+scPlusBtn.addEventListener('click', function() {
+    scQty.textContent -=-1
+    allTnt.textContent -=-1
+})
+
+scMinsBtn.addEventListener('click', function() {
+    scQty.textContent -=1
+    allTnt.textContent -=1
+})
